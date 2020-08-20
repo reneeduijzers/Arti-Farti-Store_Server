@@ -7,21 +7,21 @@ module.exports = {
       [
         {
           email: "bid1@gmail.com",
-          amount: 35,
+          amount: 550,
           createdAt: new Date(),
           updatedAt: new Date(),
           artworkId: 2,
         },
         {
           email: "bid2@gmail.com",
-          amount: 3,
+          amount: 50,
           createdAt: new Date(),
           updatedAt: new Date(),
           artworkId: 1,
         },
         {
           email: "bid3@gmail.com",
-          amount: 100,
+          amount: 125,
           createdAt: new Date(),
           updatedAt: new Date(),
           artworkId: 3,
@@ -35,7 +35,7 @@ module.exports = {
         },
         {
           email: "bid5@gmail.com",
-          amount: 5,
+          amount: 35,
           createdAt: new Date(),
           updatedAt: new Date(),
           artworkId: 1,

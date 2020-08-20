@@ -29,7 +29,7 @@ module.exports = {
           title: "David",
           imageUrl:
             "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/David_von_Michelangelo.jpg/260px-David_von_Michelangelo.jpg",
-          minimumBid: 10,
+          minimumBid: 100,
           hearts: 2,
           createdAt: new Date(),
           updatedAt: new Date(),
