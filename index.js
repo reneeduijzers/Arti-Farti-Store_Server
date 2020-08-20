@@ -1,11 +1,14 @@
 const express = require("express");
+const app = express();
+const jsonParser = express.json();
+const { PORT } = require("./config/constants");
 const loggerMiddleWare = require("morgan");
 const corsMiddleWare = require("cors");
-const { PORT } = require("./config/constants");
 const authRouter = require("./routers/auth");
+const artworkRouter = require("./routers/artworkRouter");
 const authMiddleWare = require("./auth/middleware");
 
-const app = express();
+app.use(jsonParser);
 
 /**
  * Middlewares
@@ -119,36 +122,38 @@ if (process.env.DELAY) {
  * Define your routes here (now that middlewares are configured)
  */
 
-// GET endpoint for testing purposes, can be removed
-app.get("/", (req, res) => {
-  res.send("Hi from express");
-});
+// // GET endpoint for testing purposes, can be removed
+// app.get("/", (req, res) => {
+//   res.send("Hi from express");
+// });
 
-// POST endpoint for testing purposes, can be removed
-app.post("/echo", (req, res) => {
-  res.json({
-    youPosted: {
-      ...req.body,
-    },
-  });
-});
+// // POST endpoint for testing purposes, can be removed
+// app.post("/echo", (req, res) => {
+//   res.json({
+//     youPosted: {
+//       ...req.body,
+//     },
+//   });
+// });
 
-// POST endpoint which requires a token for testing purposes, can be removed
-app.post("/authorized_post_request", authMiddleWare, (req, res) => {
-  // accessing user that was added to req by the auth middleware
-  const user = req.user;
-  // don't send back the password hash
-  delete user.dataValues["password"];
+// // POST endpoint which requires a token for testing purposes, can be removed
+// app.post("/authorized_post_request", authMiddleWare, (req, res) => {
+//   // accessing user that was added to req by the auth middleware
+//   const user = req.user;
+//   // don't send back the password hash
+//   delete user.dataValues["password"];
 
-  res.json({
-    youPosted: {
-      ...req.body,
-    },
-    userFoundWithToken: {
-      ...user.dataValues,
-    },
-  });
-});
+//   res.json({
+//     youPosted: {
+//       ...req.body,
+//     },
+//     userFoundWithToken: {
+//       ...user.dataValues,
+//     },
+//   });
+// });
+
+app.use("/", artworkRouter);
 
 app.use("/", authRouter);
 

@@ -18,7 +18,8 @@ module.exports = {
       },
       hearts: {
         type: Sequelize.INTEGER,
-        defaultValue: "0",
+        allowNUll: false,
+        defaultValue: 0,
       },
       minimumBid: {
         type: Sequelize.INTEGER,
