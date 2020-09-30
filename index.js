@@ -6,7 +6,7 @@ const loggerMiddleWare = require("morgan");
 const corsMiddleWare = require("cors");
 const authRouter = require("./routers/auth");
 const artworkRouter = require("./routers/artworkRouter");
-const authMiddleWare = require("./auth/middleware");
+// const authMiddleWare = require("./auth/middleware");
 
 app.use(jsonParser);
 
