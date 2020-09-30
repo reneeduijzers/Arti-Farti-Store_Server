@@ -1,1 +1,1 @@
-release: bash initdev.sh
+release: bash post-release.sh
