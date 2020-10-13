@@ -8,7 +8,7 @@ module.exports = {
         {
           title: "Balloon Dog",
           imageUrl:
-            "https://www.itsliquid.com/wp-content/uploads/2020/04/jeff_koons_00-17.jpg",
+            "https://www.artdependence.com/media/6203/cel14_sm.jpg?anchor=center&mode=crop&width=300&rnd=131722012560000000",
           hearts: 5,
           minimumBid: 25,
           createdAt: new Date(),
