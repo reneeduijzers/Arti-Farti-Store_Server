@@ -36,7 +36,7 @@ module.exports = {
           userId: 1,
         },
         {
-          title: "Girl with Balloon",
+          title: "Losing love",
           imageUrl:
             "https://desenio.nl/bilder/artiklar/zoom/8448_2.jpg?imgwidth=435&qt=Banksy%20Poster",
           minimumBid: 5,
@@ -46,9 +46,9 @@ module.exports = {
           userId: 2,
         },
         {
-          title: "Smoking Skeleton",
+          title: "Skeleton",
           imageUrl:
-            "https://upload.wikimedia.org/wikipedia/commons/8/87/Vincent_van_Gogh_-_Head_of_a_skeleton_with_a_burning_cigarette_-_Google_Art_Project.jpg",
+            "https://www.kunstkopie.nl/kunst/vincent_van_gogh/5153000.jpg",
           minimumBid: 33,
           hearts: 0,
           createdAt: new Date(),
